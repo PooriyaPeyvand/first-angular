@@ -1,0 +1,13 @@
+  <div class="todo-item" [attr.data-completed]="todo?.completed"
+  (dblclick)="handleToggleCompleted?.(todo)"
+  (click)="handleChangeUrl()"
+  >
+  <h2>
+  {{ todo?.title }}
+  </h2>
+  </div>
+  <div>
+    <button (click)="handleShadowDelete?.(todo)">
+      delete
+    </button>
+  </div>

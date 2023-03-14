@@ -1,0 +1,12 @@
+
+<div id="todos-container">
+  <div *ngFor="let todo of todos">
+    <app-todo
+    [handleShadowDelete]="handleShadowDelete"
+    [handleToggleCompleted]="handleToggleCompleted"
+     [todo]="todo"
+      (onUrlChange)="handleChangeUrl(todo)"
+      >
+    </app-todo>
+  </div>
+</div>
