@@ -1,0 +1,35 @@
+.todo-item {
+  position: relative;
+  cursor: pointer;
+  background-color: #dee2e6;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+   flex-grow: 1;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid indigo;;
+}
+.todo-item::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top : 0;
+  height: 100%;
+  width: 10px;
+  border-radius: 10px;
+};
+
+.todo-item[data-completed="true"]::before {
+  background-color: green;
+}
+.todo-item-btn button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background-color: indigo;
+  padding : 1rem;
+  color: #ffffff;
+  cursor: pointer;
+}

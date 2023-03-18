@@ -1,4 +1,12 @@
 
+
+<button class="bg-sky-400 text-white rounded-md p-2" (click)="handleToggleNewTodoForm()">
+  New Todo
+</button>
+<ng-container *ngIf="showNew">
+  <app-add-todo [onCreate]="handleCreateTodo"></app-add-todo>
+</ng-container>
+
 <div id="todos-container">
   <div *ngFor="let todo of todos">
     <app-todo
